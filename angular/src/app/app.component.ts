@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
+import {SidebarComponent} from "@syncfusion/ej2-angular-navigations";
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,12 @@ import {Component} from '@angular/core';
 export class AppComponent {
   title = 'angular';
 
-  public onCreated() {
+  public onCreated(args: any) {
   }
+
+  // @ts-ignore
+  @ViewChild('sidebar') sidebar: SidebarComponent;
+
+  public showBackdrop: boolean = false;
+  public closeOnDocumentClick: boolean = false;
 }

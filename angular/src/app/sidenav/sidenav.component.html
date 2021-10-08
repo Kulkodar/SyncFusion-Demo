@@ -1,0 +1,10 @@
+<div class="title"> Sidebar content</div>
+<div class="center-align">
+    <a *ngFor="let link of links"
+       class="link"
+      [title]="link.name"
+      [routerLink]="[link.link]">
+      {{ link.name }}
+    </a>
+</div>
+
