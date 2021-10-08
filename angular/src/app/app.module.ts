@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import { SidebarModule } from '@syncfusion/ej2-angular-navigations';
+import {SidebarModule, TabModule} from '@syncfusion/ej2-angular-navigations';
 import {GridTreeComponent} from "./grid.tree/grid.tree.component";
 
 @NgModule({
@@ -16,7 +16,8 @@ import {GridTreeComponent} from "./grid.tree/grid.tree.component";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SidebarModule
+    SidebarModule,
+    TabModule
   ],
   providers: [],
   bootstrap: [AppComponent]

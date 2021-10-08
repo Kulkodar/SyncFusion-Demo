@@ -1,1 +1,17 @@
-<p>gridtree works!</p>
+<div class="control-section e-tab-section">
+  <!-- Render the Tab Component -->
+  <ejs-tab id="tab_default" heightAdjustMode='Auto' class="e-fill">
+    <e-tabitems>
+      <e-tabitem [header]='headerText[0]'>
+        <ng-template #content>
+          Tab1
+        </ng-template>
+      </e-tabitem>
+      <e-tabitem [header]='headerText[1]'>
+        <ng-template #content>
+          Tab2
+        </ng-template>
+      </e-tabitem>
+    </e-tabitems>
+  </ejs-tab>
+</div>

@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GridTreeComponent implements OnInit {
 
+  public headerText = [{ text: "Users" },
+    { text: "Tree" }];
+
   constructor() { }
 
   ngOnInit(): void {
