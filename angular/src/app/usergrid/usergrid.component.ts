@@ -24,4 +24,9 @@ export class UsergridComponent implements OnInit {
 
   }
 
+  public addUser()
+  {
+    this.data?.push({ FirstName: "Test", LastName: 'Test', Email: "test@test.test", Actions: '' })
+  }
+
 }
