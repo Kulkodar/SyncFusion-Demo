@@ -6,18 +6,22 @@ import { AppComponent } from './app.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import {SidebarModule, TabModule} from '@syncfusion/ej2-angular-navigations';
 import {GridTreeComponent} from "./grid.tree/grid.tree.component";
+import { UsergridComponent } from './usergrid/usergrid.component';
+import { GridModule } from '@syncfusion/ej2-angular-grids';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
-    GridTreeComponent
+    GridTreeComponent,
+    UsergridComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SidebarModule,
-    TabModule
+    TabModule,
+    GridModule
   ],
   providers: [],
   bootstrap: [AppComponent]
