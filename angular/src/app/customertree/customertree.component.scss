@@ -1,0 +1,19 @@
+#container {
+  width: 300px;
+  background-color: #ffcc33;
+  margin: auto;
+}
+#first {
+  float: left;
+  height: 100vh;
+  overflow-y: scroll!important;
+  border-radius: 1px;
+  border: aliceblue;
+}
+#second {
+  float: left;
+  overflow: scroll!important;
+}
+#clear {
+  clear: both;
+}
