@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {users} from "../grid.tree/users";
 
 @Component({
   selector: 'syncfusion-demo-usergrid',
@@ -7,26 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsergridComponent implements OnInit {
 
-  public data: { FirstName: string; LastName: string; Email: string; Actions: string; }[] | undefined;
+  data = users;
 
   constructor() { }
 
   ngOnInit(): void {
 
-    // First name, last name, email, actions
-    this.data = [
-      { FirstName: "Max", LastName: 'Musterman', Email: "max@musterman.de", Actions: '' },
-      { FirstName: "Max", LastName: 'Musterman', Email: "max@musterman.de", Actions: '' },
-      { FirstName: "Max", LastName: 'Musterman', Email: "max@musterman.de", Actions: '' },
-      { FirstName: "Max", LastName: 'Musterman', Email: "max@musterman.de", Actions: '' },
-      { FirstName: "Max", LastName: 'Musterman', Email: "max@musterman.de", Actions: '' },
-    ];
 
   }
 
   public addUser()
   {
-    this.data?.push({ FirstName: "Test", LastName: 'Test', Email: "test@test.test", Actions: '' })
+    // this.data?.push({ firstName: "Test", lastName: 'Test', email: "test@test.test" })
   }
 
 }
