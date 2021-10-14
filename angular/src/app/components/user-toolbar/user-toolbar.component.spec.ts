@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UsergridComponent } from './usergrid.component';
+import { UserToolbarComponent } from './user-toolbar.component';
 
-describe('UsergridComponent', () => {
-  let component: UsergridComponent;
-  let fixture: ComponentFixture<UsergridComponent>;
+describe('UserToolbarComponent', () => {
+  let component: UserToolbarComponent;
+  let fixture: ComponentFixture<UserToolbarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UsergridComponent ]
+      declarations: [ UserToolbarComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UsergridComponent);
+    fixture = TestBed.createComponent(UserToolbarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

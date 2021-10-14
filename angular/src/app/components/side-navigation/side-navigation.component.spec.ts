@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Grid.TreeComponent } from './grid.tree.component';
+import { SideNavigationComponent } from './side-navigation.component';
 
-describe('Grid.TreeComponent', () => {
-  let component: Grid.TreeComponent;
-  let fixture: ComponentFixture<Grid.TreeComponent>;
+describe('SideNavigationComponent', () => {
+  let component: SideNavigationComponent;
+  let fixture: ComponentFixture<SideNavigationComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Grid.TreeComponent ]
+      declarations: [ SideNavigationComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Grid.TreeComponent);
+    fixture = TestBed.createComponent(SideNavigationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

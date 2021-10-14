@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CustomertreeComponent } from './customertree.component';
+import { UserGridComponent } from './user-grid.component';
 
-describe('CustomertreeComponent', () => {
-  let component: CustomertreeComponent;
-  let fixture: ComponentFixture<CustomertreeComponent>;
+describe('UserGridComponent', () => {
+  let component: UserGridComponent;
+  let fixture: ComponentFixture<UserGridComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CustomertreeComponent ]
+      declarations: [ UserGridComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CustomertreeComponent);
+    fixture = TestBed.createComponent(UserGridComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

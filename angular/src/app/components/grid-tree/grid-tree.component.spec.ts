@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UsertoolbarComponent } from './usertoolbar.component';
+import { GridTreeComponent } from './grid-tree.component';
 
-describe('UsertoolbarComponent', () => {
-  let component: UsertoolbarComponent;
-  let fixture: ComponentFixture<UsertoolbarComponent>;
+describe('GridTreeComponent', () => {
+  let component: GridTreeComponent;
+  let fixture: ComponentFixture<GridTreeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UsertoolbarComponent ]
+      declarations: [ GridTreeComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UsertoolbarComponent);
+    fixture = TestBed.createComponent(GridTreeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
