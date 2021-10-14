@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'syncfusion-demo-grid-tree',
@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GridTreeComponent implements OnInit {
 
-  public headerText = [{ text: "Users" },
-    { text: "Tree" }];
-  constructor() { }
+  public headerText = [{text: "Users"},
+    {text: "Tree"}];
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

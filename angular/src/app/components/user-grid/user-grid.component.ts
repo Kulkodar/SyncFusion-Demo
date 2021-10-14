@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {users} from "../user-toolbar/users";
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'syncfusion-demo-user-grid',
@@ -10,15 +9,15 @@ export class UserGridComponent implements OnInit {
 
   data = [];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
 
 
   }
 
-  public addUser()
-  {
+  public addUser() {
     // this.data?.push({ firstName: "Test", lastName: 'Test', email: "test@test.test" })
   }
 

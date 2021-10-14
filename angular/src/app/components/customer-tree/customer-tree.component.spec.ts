@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { CustomerTreeComponent } from './customer-tree.component';
+import {CustomerTreeComponent} from './customer-tree.component';
 
 describe('CustomerTreeComponent', () => {
   let component: CustomerTreeComponent;
@@ -8,9 +8,9 @@ describe('CustomerTreeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CustomerTreeComponent ]
+      declarations: [CustomerTreeComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

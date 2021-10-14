@@ -1,21 +1,27 @@
-import { Injectable } from '@angular/core';
-import {SidebarItem} from "@models/sidebar-item";
+import {Injectable} from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SidebarService {
 
-  private sidebarItems: SidebarItem[] = [
+  private sidebarItems: Object[] = [
     {
-      name: "Grid",
+      id: "sidebar-listview-1",
+      text: "Grid",
       link: "grid-tree"
+    },
+    {
+      id: "sidebar-listview-2",
+      text: "Home",
+      link: "home"
     }
   ];
 
-  constructor() { }
+  constructor() {
+  }
 
-  public getSidebarItems(): Promise<SidebarItem[]> {
-    return new Promise<SidebarItem[]>(resolve => resolve(this.sidebarItems));
+  public getSidebarItems(): Promise<Object[]> {
+    return new Promise<Object[]>(resolve => resolve(this.sidebarItems));
   }
 }

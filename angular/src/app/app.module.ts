@@ -11,6 +11,7 @@ import {SideNavigationComponent} from '@components/side-navigation/side-navigati
 import {UserGridComponent} from '@components/user-grid/user-grid.component';
 import {HomeComponent} from '@components/home/home.component';
 import {GridTreeComponent} from "@components/grid-tree/grid-tree.component";
+import {ListViewModule} from "@syncfusion/ej2-angular-lists";
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {GridTreeComponent} from "@components/grid-tree/grid-tree.component";
     TabModule,
     GridModule,
     ToolbarModule,
-    TreeViewModule
+    TreeViewModule,
+    ListViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]

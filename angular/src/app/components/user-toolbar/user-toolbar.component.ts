@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Button} from "@syncfusion/ej2-angular-buttons";
 
 @Component({
@@ -11,7 +11,7 @@ export class UserToolbarComponent implements OnInit {
   public mediaBtn: any;
 
   constructor() {
-    this.mediaBtn = new Button({ cssClass: `e-flat`, iconCss: 'e-icons e-play-icon', isToggle: false });
+    this.mediaBtn = new Button({cssClass: `e-flat`, iconCss: 'e-icons e-play-icon', isToggle: false});
     this.mediaBtn.appendTo('#media_btn');
   }
 

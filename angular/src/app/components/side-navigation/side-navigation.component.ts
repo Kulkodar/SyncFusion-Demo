@@ -1,5 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-import {SidebarComponent} from "@syncfusion/ej2-angular-navigations";
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'syncfusion-demo-side-navigation',
