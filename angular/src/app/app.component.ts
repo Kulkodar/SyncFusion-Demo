@@ -1,21 +1,39 @@
-import {Component, ViewChild} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {SidebarComponent} from "@syncfusion/ej2-angular-navigations";
+import {SidebarService} from "@services/sidebar.service";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+export class AppComponent implements OnInit {
+  // @ts-ignore
+  @ViewChild('sidebar', {static: false}) sidebar: SidebarComponent;
+  public sidebarItems: Promise<any[]>
+  public closeOnDocumentClick: boolean = true;
+  public width = "200px";
 
-export class AppComponent {
-  title = 'angular';
-
-  public onCreated(args: any) {
+  constructor(private sidebarService: SidebarService) {
+    this.sidebarItems = sidebarService.getSidebarItems();
   }
 
-  // @ts-ignore
-  @ViewChild('sidebar') sidebar: SidebarComponent;
+  ngOnInit(): void {
+  }
 
-  public showBackdrop: boolean = false;
-  public closeOnDocumentClick: boolean = false;
+  openClick(): void {
+    this.sidebar.toggle();
+  }
+
+  public onCreated() {
+    this.sidebar.element.style.visibility = '';
+  }
+
+  closeClick(): void {
+    this.sidebar.hide();
+  }
+
+  toggleClick(): void {
+    this.sidebar.show();
+  }
 }

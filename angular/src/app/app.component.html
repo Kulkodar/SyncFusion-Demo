@@ -1,9 +1,21 @@
-<ejs-sidebar id="default-sidebar" #sidebar [showBackdrop]="showBackdrop" [closeOnDocumentClick]="closeOnDocumentClick">
-  <syncfusion-demo-sidenav></syncfusion-demo-sidenav>
-</ejs-sidebar>
-
-<div>
-  <router-outlet></router-outlet>
+<div id='container'>
+  <div id="wrapper">
+    <ejs-sidebar id="default-sidebar" #sidebar [width]='width'>
+      <div class="title1">Menu</div>
+      <div id="listcontainer">
+        <ejs-listview id='list' [dataSource]='sidebarItems | async'>
+          <ng-template #template let-data="">
+            <div class="e-list-wrapper" [routerLink]="data.link">
+              <span class="e-list-content">{{data.text}}</span>
+            </div>
+          </ng-template>
+        </ejs-listview>
+      </div>
+    </ejs-sidebar>
+    <div>
+      <div>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
 </div>
-
-
