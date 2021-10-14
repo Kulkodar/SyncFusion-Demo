@@ -1,5 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {SidebarComponent} from "@syncfusion/ej2-angular-navigations";
+import {SidebarService} from "@services/sidebar.service";
+import {SidebarItem} from "@models/sidebar-item";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,11 +10,13 @@ import {SidebarComponent} from "@syncfusion/ej2-angular-navigations";
 export class AppComponent implements OnInit{
   // @ts-ignore
   @ViewChild('sidebar', {static: false}) sidebar: SidebarComponent;
-
+  public sidebarItems: Promise<SidebarItem[]>
   public showBackdrop: boolean = true;
   public closeOnDocumentClick: boolean = true;
 
-  constructor() { }
+  constructor(private sidebarService: SidebarService) {
+    this.sidebarItems = sidebarService.getSidebarItems();
+  }
 
   ngOnInit(): void {
   }
