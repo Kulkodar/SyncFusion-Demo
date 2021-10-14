@@ -7,8 +7,10 @@ import {Component, OnInit} from '@angular/core';
 })
 export class GridTreeComponent implements OnInit {
 
-  public headerText = [{text: "Users"},
-    {text: "Tree"}];
+  public headerText = [
+    {text: "Users"},
+    {text: "Customer Tree"}
+  ];
 
   constructor() {
   }

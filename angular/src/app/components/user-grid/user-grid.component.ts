@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {UserService} from "@services/user.service";
+import {User} from "@models/user";
 
 @Component({
   selector: 'syncfusion-demo-user-grid',
@@ -7,9 +9,10 @@ import {Component, OnInit} from '@angular/core';
 })
 export class UserGridComponent implements OnInit {
 
-  data = [];
+  users: Promise<User[]>;
 
-  constructor() {
+  constructor(private userService: UserService) {
+    this.users = userService.getUsers();
   }
 
   ngOnInit(): void {
