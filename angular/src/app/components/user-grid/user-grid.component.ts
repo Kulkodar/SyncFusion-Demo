@@ -1,12 +1,13 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {UserService} from "@services/user.service";
 import {User} from "@models/user";
-import {DialogEditEventArgs, EditSettingsModel, ToolbarItems} from "@syncfusion/ej2-angular-grids";
-import {FormGroup} from "@angular/forms";
-import {EmitType} from "@syncfusion/ej2-base";
-
-class DialogComponent {
-}
+import {
+  Column,
+  EditEventArgs,
+  EditSettingsModel,
+  GridComponent,
+  ToolbarItems
+} from "@syncfusion/ej2-angular-grids";
 
 @Component({
   selector: 'syncfusion-demo-user-grid',
@@ -20,11 +21,14 @@ export class UserGridComponent implements OnInit {
   public hidden = true;
   public editSettings: EditSettingsModel;
   public toolbar: ToolbarItems[];
+  public formatOptions: object;
+  @ViewChild('grid') grid: GridComponent | undefined;
 
   constructor(private userService: UserService) {
     this.users = userService.getUsers();
     this.editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Dialog' };
     this.toolbar = ['Add', 'Edit', 'Delete'];
+    this.formatOptions = {type: 'date', format: 'dd/MM/yyyy'};
   }
 
   ngOnInit(): void {
@@ -34,4 +38,37 @@ export class UserGridComponent implements OnInit {
     // this.data?.push({ firstName: "Test", lastName: 'Test', email: "test@test.test" })
   }
 
+  actionBegin(args: EditEventArgs) {
+    if ((args.requestType === 'beginEdit' || args.requestType === 'add')) {
+      // @ts-ignore
+      for (const cols of this.grid?.columns) {
+        if ((cols as Column).field === 'actions') {
+          (cols as Column).visible = false;
+        }
+        if ((cols as Column).field === 'birthday') {
+          (cols as Column).visible = true;
+        }
+      }
+    }
+  }
+
+  actionComplete(args: { requestType: string; dialog: any; rowData: { [x: string]: string; }; }) {
+    if ((args.requestType === 'beginEdit' || args.requestType === 'add')) {
+      console.log("test");
+      const dialog = args.dialog;
+      dialog.showCloseIcon = false;
+      dialog.height = 400;
+    }
+    if (args.requestType === 'save') {
+      // @ts-ignore
+      for (const cols of this.grid?.columns) {
+        if ((cols as Column).field === 'actions') {
+          (cols as Column).visible = true;
+        }
+        if ((cols as Column).field === 'birthday') {
+          (cols as Column).visible = false;
+        }
+      }
+    }
+  }
 }

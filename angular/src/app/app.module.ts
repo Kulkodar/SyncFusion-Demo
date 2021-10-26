@@ -13,7 +13,7 @@ import {HomeComponent} from '@components/home/home.component';
 import {GridTreeComponent} from "@components/grid-tree/grid-tree.component";
 import {ListViewModule} from "@syncfusion/ej2-angular-lists";
 import {FormsModule} from "@angular/forms";
-import {CheckBoxModule} from "@syncfusion/ej2-angular-buttons";
+import {ButtonModule, CheckBoxModule} from "@syncfusion/ej2-angular-buttons";
 import {DialogModule} from "@syncfusion/ej2-angular-popups";
 
 @NgModule({
@@ -37,7 +37,8 @@ import {DialogModule} from "@syncfusion/ej2-angular-popups";
     ListViewModule,
     DialogModule,
     FormsModule,
-    CheckBoxModule
+    CheckBoxModule,
+    ButtonModule,
   ],
   providers: [EditService, ToolbarService],
   bootstrap: [AppComponent]

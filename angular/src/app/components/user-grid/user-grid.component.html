@@ -1,10 +1,12 @@
-<ejs-grid [dataSource]='users | async' [editSettings]='editSettings' [toolbar]='toolbar'>
+<ejs-grid #grid [dataSource]='users | async' [editSettings]='editSettings' [toolbar]='toolbar' (actionBegin)="actionBegin($event)" (actionComplete)="actionComplete($event)">
   <e-columns>
     <e-column field='firstName' headerText='First Name' width='120'></e-column>
     <e-column field='lastName' headerText='Last Name' width='120'></e-column>
     <e-column field='email' headerText='Email'></e-column>
-    <e-column headerText="Actions">
-      <ng-template e-template>
+    <e-column field='birthday' headerText='Birthday' [format]='formatOptions' [visible]='false' width=100></e-column>
+    <e-column field='actions' headerText="Actions">
+      <ng-template #template>
+        TODO
       </ng-template>
     </e-column>
   </e-columns>
