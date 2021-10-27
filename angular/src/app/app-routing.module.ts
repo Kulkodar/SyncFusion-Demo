@@ -2,11 +2,15 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {GridTreeComponent} from "@components/grid-tree/grid-tree.component";
 import {HomeComponent} from "@components/home/home.component";
+import {TreeUserComponent} from "@components/tree-user/tree-user.component";
 
 const routes: Routes = [
   {
     path: "grid-tree",
-    component: GridTreeComponent
+    component: GridTreeComponent,
+    children:[
+      { path: 'user/:id', component: TreeUserComponent}
+    ]
   },
   {
     path: "home",

@@ -15,6 +15,7 @@ import {ListViewModule} from "@syncfusion/ej2-angular-lists";
 import {FormsModule} from "@angular/forms";
 import {ButtonModule, CheckBoxModule} from "@syncfusion/ej2-angular-buttons";
 import {DialogModule} from "@syncfusion/ej2-angular-popups";
+import {TreeUserComponent} from "@components/tree-user/tree-user.component";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {DialogModule} from "@syncfusion/ej2-angular-popups";
     CustomerTreeComponent,
     SideNavigationComponent,
     UserGridComponent,
-    HomeComponent
+    HomeComponent,
+    TreeUserComponent
   ],
   imports: [
     BrowserModule,

@@ -8,7 +8,7 @@ export class UserService {
 
   private users: User[] = [
     {
-      id: 1,
+      id: 3,
       firstName: "Kevin",
       lastName: "Winkler",
       email: "kevin.winkler@cn-consult.eu"
@@ -25,6 +25,14 @@ export class UserService {
 
   public getUsers(): Promise<User[]> {
     return new Promise<User[]>(resolve => resolve(this.users));
+  }
+
+  public getUser(id: number)
+  {
+    return new Promise<User|undefined>(resolve => {
+      let tempUser = this.users.find(user => user.id == id)
+      resolve(tempUser);
+    });
   }
 
   public getUserList() {
