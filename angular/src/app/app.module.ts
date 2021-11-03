@@ -16,6 +16,9 @@ import {FormsModule} from "@angular/forms";
 import {ButtonModule, CheckBoxModule} from "@syncfusion/ej2-angular-buttons";
 import {DialogModule} from "@syncfusion/ej2-angular-popups";
 import {TreeUserComponent} from "@components/tree-user/tree-user.component";
+import {TextBoxModule} from "@syncfusion/ej2-angular-inputs";
+import {FlexModule} from "@angular/flex-layout";
+import {DatePickerAllModule} from "@syncfusion/ej2-angular-calendars";
 
 @NgModule({
   declarations: [
@@ -41,6 +44,9 @@ import {TreeUserComponent} from "@components/tree-user/tree-user.component";
     FormsModule,
     CheckBoxModule,
     ButtonModule,
+    TextBoxModule,
+    FlexModule,
+    DatePickerAllModule,
   ],
   providers: [EditService, ToolbarService],
   bootstrap: [AppComponent]

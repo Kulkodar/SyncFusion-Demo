@@ -5,7 +5,7 @@ import {
   Column,
   EditEventArgs,
   EditSettingsModel,
-  GridComponent,
+  GridComponent, IEditCell,
   ToolbarItems
 } from "@syncfusion/ej2-angular-grids";
 
@@ -22,6 +22,7 @@ export class UserGridComponent implements OnInit {
   public editSettings: EditSettingsModel;
   public toolbar: ToolbarItems[];
   public formatOptions: object;
+  public dpParams: IEditCell | undefined;
   @ViewChild('grid') grid: GridComponent | undefined;
 
   constructor(private userService: UserService) {
@@ -32,6 +33,7 @@ export class UserGridComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.dpParams = { params: {value: new Date() } };
   }
 
   public addUser() {

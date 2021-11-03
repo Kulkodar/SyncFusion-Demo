@@ -3,7 +3,7 @@
     <e-column field='firstName' headerText='First Name' width='120'></e-column>
     <e-column field='lastName' headerText='Last Name' width='120'></e-column>
     <e-column field='email' headerText='Email'></e-column>
-    <e-column field='birthday' headerText='Birthday' [format]='formatOptions' [visible]='false' width=100></e-column>
+    <e-column field='birthday' headerText='Birthday'  [edit]='dpParams' editType='datepickeredit' [format]='formatOptions' [visible]='false' width=100></e-column>
     <e-column field='actions' headerText="Actions">
       <ng-template #template>
         TODO

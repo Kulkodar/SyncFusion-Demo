@@ -1,4 +1,7 @@
-<div id="first">
+
+<div fxLayout>
   <ejs-treeview id='treeelement' [fields]='field' (nodeSelected)="onNodeSelect($event)"></ejs-treeview>
+  <div fxFlex="grow">
+    <router-outlet ></router-outlet>
+  </div>
 </div>
-<div id="second"><router-outlet></router-outlet></div>
