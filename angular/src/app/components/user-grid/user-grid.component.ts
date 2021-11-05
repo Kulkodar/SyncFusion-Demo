@@ -60,6 +60,7 @@ export class UserGridComponent implements OnInit {
       const dialog = args.dialog;
       dialog.showCloseIcon = false;
       dialog.height = 400;
+      dialog.header = args.requestType === 'beginEdit' ? 'Edit Record of ' + args.rowData['firstName'] + ' ' + args.rowData['lastName'] : 'New User';
     }
     if (args.requestType === 'save') {
       // @ts-ignore

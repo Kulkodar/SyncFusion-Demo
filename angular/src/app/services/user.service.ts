@@ -11,12 +11,14 @@ export class UserService {
       id: 3,
       firstName: "Kevin",
       lastName: "Winkler",
+      birthDay: new Date(),
       email: "kevin.winkler@cn-consult.eu"
     },
     {
       id: 2,
       firstName: "Max",
       lastName: "Musterman",
+      birthDay: new Date(),
       email: "max.musterman@cn-consult.eu"
     },
   ];
