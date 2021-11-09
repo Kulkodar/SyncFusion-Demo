@@ -3,6 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {GridTreeComponent} from "@components/grid-tree/grid-tree.component";
 import {HomeComponent} from "@components/home/home.component";
 import {TreeUserComponent} from "@components/tree-user/tree-user.component";
+import {NestedListComponent} from "@components/nested-list/nested-list.component";
 
 const routes: Routes = [
   {
@@ -15,6 +16,10 @@ const routes: Routes = [
   {
     path: "home",
     component: HomeComponent
+  },
+  {
+    path: "nestedlist",
+    component: NestedListComponent
   },
   {
     path: "",

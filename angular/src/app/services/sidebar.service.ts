@@ -15,6 +15,11 @@ export class SidebarService {
       id: "sidebar-listview-2",
       text: "Home",
       link: "home"
+    },
+    {
+      id: "sidebar-listview-3",
+      text: "Nested List",
+      link: "nestedlist"
     }
   ];
 

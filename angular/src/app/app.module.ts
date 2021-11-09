@@ -19,6 +19,7 @@ import {TreeUserComponent} from "@components/tree-user/tree-user.component";
 import {TextBoxModule} from "@syncfusion/ej2-angular-inputs";
 import {FlexModule} from "@angular/flex-layout";
 import {DatePickerAllModule} from "@syncfusion/ej2-angular-calendars";
+import {NestedListComponent} from "@components/nested-list/nested-list.component";
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {DatePickerAllModule} from "@syncfusion/ej2-angular-calendars";
     SideNavigationComponent,
     UserGridComponent,
     HomeComponent,
-    TreeUserComponent
+    TreeUserComponent,
+    NestedListComponent
   ],
   imports: [
     BrowserModule,
