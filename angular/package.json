@@ -30,6 +30,7 @@
     "@syncfusion/ej2-angular-lists": "^19.3.45",
     "@syncfusion/ej2-angular-navigations": "^19.3.44",
     "@syncfusion/ej2-angular-popups": "^19.3.43",
+    "@syncfusion/ej2-angular-treemap": "^19.3.43",
     "@syncfusion/ej2-base": "^19.3.47",
     "@syncfusion/ej2-inputs": "^19.3.48",
     "eslint-plugin-html": "^6.2.0",

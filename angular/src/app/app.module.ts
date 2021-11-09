@@ -20,6 +20,8 @@ import {TextBoxModule} from "@syncfusion/ej2-angular-inputs";
 import {FlexModule} from "@angular/flex-layout";
 import {DatePickerAllModule} from "@syncfusion/ej2-angular-calendars";
 import {NestedListComponent} from "@components/nested-list/nested-list.component";
+import { TreeMapComponent } from './components/tree-map/tree-map.component';
+import {TreeMapModule} from "@syncfusion/ej2-angular-treemap";
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import {NestedListComponent} from "@components/nested-list/nested-list.component
     UserGridComponent,
     HomeComponent,
     TreeUserComponent,
-    NestedListComponent
+    NestedListComponent,
+    TreeMapComponent
   ],
   imports: [
     BrowserModule,
@@ -49,6 +52,7 @@ import {NestedListComponent} from "@components/nested-list/nested-list.component
     TextBoxModule,
     FlexModule,
     DatePickerAllModule,
+    TreeMapModule,
   ],
   providers: [EditService, ToolbarService],
   bootstrap: [AppComponent]

@@ -4,6 +4,7 @@ import {GridTreeComponent} from "@components/grid-tree/grid-tree.component";
 import {HomeComponent} from "@components/home/home.component";
 import {TreeUserComponent} from "@components/tree-user/tree-user.component";
 import {NestedListComponent} from "@components/nested-list/nested-list.component";
+import {TreeMapComponent} from "@components/tree-map/tree-map.component";
 
 const routes: Routes = [
   {
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: "nestedlist",
     component: NestedListComponent
+  },
+  {
+    path: "Treemap",
+    component: TreeMapComponent
   },
   {
     path: "",

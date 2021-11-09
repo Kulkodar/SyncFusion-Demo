@@ -20,6 +20,11 @@ export class SidebarService {
       id: "sidebar-listview-3",
       text: "Nested List",
       link: "nestedlist"
+    },
+    {
+      id: "sidebar-listview-4",
+      text: "Tree Map",
+      link: "Treemap"
     }
   ];
 
