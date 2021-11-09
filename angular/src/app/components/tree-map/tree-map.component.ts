@@ -1,4 +1,4 @@
-import {Component, Inject, OnInit} from '@angular/core';
+import {Component, Inject, OnInit, ViewChild} from '@angular/core';
 import {
   IItemClickEventArgs,
   IItemMoveEventArgs,
@@ -8,6 +8,8 @@ import {
 } from "@syncfusion/ej2-angular-treemap";
 import {CarSalesService} from "@services/car-sales.service";
 import {CarSales} from "@models/car-sales";
+import {ContextMenuComponent, MenuEventArgs, MenuItemModel} from "@syncfusion/ej2-angular-navigations";
+import {Browser} from "@syncfusion/ej2-base";
 
 // tooltips only functions when the needed module is injected
 TreeMap.Inject(TreeMapTooltip, TreeMapLegend);
@@ -81,4 +83,65 @@ export class TreeMapComponent implements OnInit {
   ngOnInit(): void {
 
     }
+
+  public content: string = '';
+
+  @ViewChild('contextmenu')
+  public contextmenu: ContextMenuComponent | undefined;
+
+  // Event triggers while rendering each menu item where “Link” menu item is disabled
+  public addDisabled  (args: MenuEventArgs) {
+    if (args.item.text === 'Link') {
+      args.element.classList.add('e-disabled');
+    }
+  }
+
+  // ContextMenu items definition
+  public menuItems: MenuItemModel[] = [
+    {
+      text: 'Cut',
+      iconCss: 'e-cm-icons e-cut'
+    },
+    {
+      text: 'Copy',
+      iconCss: 'e-cm-icons e-copy'
+    },
+    {
+      text: 'Paste',
+      iconCss: 'e-cm-icons e-paste',
+      items: [
+        {
+          text: 'Paste Text',
+          iconCss: 'e-cm-icons e-pastetext'
+        },
+        {
+          text: 'Paste Special',
+          iconCss: 'e-cm-icons e-pastespecial'
+        }
+      ]
+    },
+    {
+      separator: true
+    },
+    {
+      text: 'Link',
+      iconCss: 'e-cm-icons e-link'
+    },
+    {
+      text: 'New Comment',
+      iconCss: 'e-cm-icons e-comment'
+    }];
+
+  // Event triggers once the context menu rendering is completed.
+  onCreated(): void {
+    if (Browser.isDevice) {
+      this.content = 'Touch hold to open the ContextMenu';
+      // @ts-ignore
+      this.contextmenu.animationSettings.effect = 'ZoomIn';
+    } else {
+      this.content = 'Right click / Touch hold to open the ContextMenu';
+      // @ts-ignore
+      this.contextmenu.animationSettings.effect = 'SlideDown';
+    }
+  }
 }

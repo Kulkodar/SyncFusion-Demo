@@ -16,3 +16,8 @@
       www.factorywarrantylist.com</a>
   </div>
 </div>
+<div class="contextmenu-section">
+  <div id="contextmenu-control">
+    <ejs-contextmenu #contextmenu target='#container' [items]='menuItems' (beforeItemRender)='addDisabled($event)' (created)='onCreated()'></ejs-contextmenu>
+  </div>
+</div>

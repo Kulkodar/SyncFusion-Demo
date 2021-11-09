@@ -3,7 +3,13 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {SidebarModule, TabModule, ToolbarModule, TreeViewModule} from '@syncfusion/ej2-angular-navigations';
+import {
+  ContextMenuModule,
+  SidebarModule,
+  TabModule,
+  ToolbarModule,
+  TreeViewModule
+} from '@syncfusion/ej2-angular-navigations';
 import {EditService, GridModule, ToolbarService} from '@syncfusion/ej2-angular-grids';
 import {UserToolbarComponent} from '@components/user-toolbar/user-toolbar.component';
 import {CustomerTreeComponent} from '@components/customer-tree/customer-tree.component';
@@ -53,6 +59,7 @@ import {TreeMapModule} from "@syncfusion/ej2-angular-treemap";
     FlexModule,
     DatePickerAllModule,
     TreeMapModule,
+    ContextMenuModule,
   ],
   providers: [EditService, ToolbarService],
   bootstrap: [AppComponent]
